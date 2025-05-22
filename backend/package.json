@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .ts",
     "migrate": "prisma migrate dev",
     "generate": "prisma generate",
-    "clean": "rimraf node_modules dist",
+    "clean": "npx rimraf node_modules dist",
     "rebuild": "npm run clean && npm install && npm run build"
   },
   "dependencies": {

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rimraf node_modules .next",
+    "clean": "npx rimraf node_modules .next",
     "rebuild": "npm run clean && npm install && npm run build"
   },
   "dependencies": {
