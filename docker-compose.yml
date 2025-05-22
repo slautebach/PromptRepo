@@ -1,12 +1,12 @@
-version: '3.8'
+version: "3.8"
 
 services:
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    #ports:
-      #- "3000:3000"
+    # ports:
+    #   - "3000:3000"
     environment:
       - NODE_ENV=development
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/promptrepo
@@ -23,11 +23,11 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    #ports:
-      #- "80:80"
+    # ports:
+    #   - "80:80"
     environment:
       - NODE_ENV=development
-      - API_URL=http://localhost:3000
+      - API_URL=http://backend:3000
     volumes:
       - ./frontend:/app
       - /app/node_modules
@@ -44,4 +44,4 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
 volumes:
-  postgres_data: 
+  postgres_data:
