@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8401",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 8401",
     "lint": "next lint",
     "clean": "npx rimraf node_modules .next",
     "rebuild": "npm run clean && npm install && npm run build"
